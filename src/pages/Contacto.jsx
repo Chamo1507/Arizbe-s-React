@@ -1,2 +1,4 @@
-const Contacto = () => {};
+const Contacto = () => {
+  return <div></div>;
+};
 export default Contacto;
