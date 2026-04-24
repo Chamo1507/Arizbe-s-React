@@ -1,50 +1,46 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
+import logoArizbes from "../../Assets/brand/LogoOnlyNombre_Invertido.png";
+const links = [
+  { to: "/", label: "Inicio" },
+  { to: "/Producto", label: "Productos" },
+  { to: "/Nosotros", label: "Nosotros" },
+  { to: "/Contacto", label: "Contactanos" },
+  { to: "/Ofertas", label: "Ofertas" },
+];
 const Footer = () => {
   return (
     <footer className="footer-container">
       <div className="left">
-        <a href="./Index.html">
-          <img
-            src="/2do_Proyecto_Arizbe-s/ASSETS/IMG/Logo_Arizbe's_invertido_Transparente.png"
-            alt="Logo Arizbe's panadería & postrería"
-          />
-        </a>
+        <Link className="navbar__brand" to="/" aria-label="Ir a inicio">
+          <img src={logoArizbes} alt="logoArizbes" />
+        </Link>
       </div>
 
       <div className="center">
-        <ul>
-          <li>
-            <a href="./Index.html">Inicio</a>
-          </li>
-          <li>
-            <a href="./PAGES/Producto.html">Productos</a>
-          </li>
-          <li>
-            <a href="./PAGES/Nosotros.html">Nosotros</a>
-          </li>
-          <li>
-            <a href="./PAGES/Contacto.html">Contactanos</a>
-          </li>
+        <ul className="">
+          {links.map((link) => (
+            <li key={link.to}>
+              <NavLink to={link.to} onClick={() => setOpenMenu(false)}>
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
 
       <div className="right">
         <div className="icons">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-instagram"></i>
-          </a>
-          <a
-            href="https://wa.me/+522205199447?text=Me gustaría ordenar:"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-whatsapp"></i>
-          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+  <FontAwesomeIcon icon={faInstagram} />
+</a>
+          
+          <a href="https://wa.me/+522205199447" target="_blank" rel="noopener noreferrer">
+  <FontAwesomeIcon icon={faWhatsapp} />
+</a>
         </div>
       </div>
     </footer>
