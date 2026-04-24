@@ -1,7 +1,15 @@
 .main-layout {
+  display: flex;
+  flex-direction: column; /* Apila Navbar, Outlet y Footer verticalmente */
+  min-height: 100vh; /* Asegura que el layout ocupe al menos toda la pantalla */
   width: 100%;
-  min-height: 100vh;
   overflow-x: hidden;
-  background: transparent;
-  color: var(--color-tertiary);
+  background-color: var(--bg-default); /* Usa tu variable de color */
+  color: var(--text-default); /* Usa tu variable de color */
+}
+
+/* El elemento que envuelve al Outlet dentro de tu MainLayout */
+/* Si no tienes uno, simplemente aplica este estilo al componente que renderiza el Outlet */
+.outlet-container {
+  flex: 1; /* Esto obliga a que el Outlet ocupe todo el espacio sobrante */
 }

@@ -1,3 +1,12 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Satisfy&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+/*----------------------------*/
+
 .navbar {
   width: 100%;
   position: sticky;
@@ -16,7 +25,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  background: #ffffff;
+  background: var(--color-bg);
   border-radius: 16px;
   box-shadow: 0 2px 20px rgba(26, 31, 54, 0.06);
 }
@@ -49,6 +58,7 @@
 }
 
 .navbar__list {
+  font-family: Satisfy;
   list-style: none;
   display: flex;
   align-items: center;
@@ -67,12 +77,12 @@
 
 .navbar__list a:hover {
   background-color: var(--color-surface-alt);
-  color: var(--color-tertiary);
+  color: var(--color-primary);
 }
 
 .navbar__list a.active {
   background-color: var(--color-primary);
-  color: var(--color-surface-alt);
+  color: var(--color-bg);
   box-shadow: 0 2px 10px rgba(67, 97, 238, 0.22);
 }
 
