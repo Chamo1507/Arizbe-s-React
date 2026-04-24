@@ -1,0 +1,50 @@
+footer {
+  /* Usamos el color de tu paleta: #54332B (Café profundo) */
+  background-color: var(--color-muted);
+  color: #f2e7d5; /* Tu crema arena para el texto */
+  padding: 30px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Ajuste del logo para que no se pierda */
+footer img {
+  height: 80px; /* Un poco más pequeño para dar aire */
+  opacity: 0.9;
+}
+
+/* Las líneas divisoras blancas que se ven en tu imagen */
+.left,
+.center,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Líneas laterales verticales (como las de tu imagen) */
+.center {
+  border-left: 1px solid #f2e7d5;
+  border-right: 1px solid #f2e7d5;
+}
+
+.center ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.center ul li {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.center ul li a {
+  color: #f2e7d5;
+  text-decoration: none;
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+}
