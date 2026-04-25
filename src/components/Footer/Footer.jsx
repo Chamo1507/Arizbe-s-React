@@ -24,9 +24,7 @@ const Footer = () => {
         <ul className="">
           {links.map((link) => (
             <li key={link.to}>
-              <NavLink to={link.to} onClick={() => setOpenMenu(false)}>
-                {link.label}
-              </NavLink>
+              <NavLink to={link.to}>{link.label}</NavLink>
             </li>
           ))}
         </ul>
@@ -34,13 +32,21 @@ const Footer = () => {
 
       <div className="right">
         <div className="icons">
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-  <FontAwesomeIcon icon={faInstagram} />
-</a>
-          
-          <a href="https://wa.me/+522205199447" target="_blank" rel="noopener noreferrer">
-  <FontAwesomeIcon icon={faWhatsapp} />
-</a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+
+          <a
+            href="https://wa.me/+522205199447"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </a>
         </div>
       </div>
     </footer>
