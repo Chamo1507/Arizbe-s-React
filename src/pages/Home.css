@@ -1,0 +1,161 @@
+.mainContainer {
+  width: 95%;
+  margin: 20px auto;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#BackInicio {
+  position: absolute;
+  width: 100%;
+  opacity: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.5) brightness(0.5);
+  z-index: 1;
+}
+
+#logoInicio {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+#PocoDeNosotros {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  gap: 10px;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.PocoNosotrosText {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  gap: 40px;
+}
+
+.PocoNosotrosText h1 {
+  font-size: 50px;
+  justify-content: center;
+  color: #54332b;
+}
+
+.PocoNosotrosText h2 {
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 500px;
+  font-size: 20px;
+  color: black;
+}
+
+.IMGPocoDeNosotros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  overflow: hidden;
+}
+
+.IMGPocoDeNosotros img {
+  height: 350px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.5s;
+}
+
+.IMGPocoDeNosotros img:hover {
+  transform: scale(1.05);
+  filter: brightness(120%);
+}
+
+#BannerContainer {
+  background-color: #54332b;
+  height: 250px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  place-items: center;
+}
+
+#BannerContainer img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  display: block;
+}
+#BannerContainer h1,
+h2 {
+  color: aliceblue;
+  text-align: center;
+}
+
+#BannerContainer h1 {
+  font-size: 25px;
+}
+
+#Galeria {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  padding: 1%;
+  padding-top: 0%;
+  gap: 10px;
+  text-align: center;
+}
+
+.GaleriaContainer {
+  background-size: contain;
+  background-position: center;
+  animation: fondoLoop 15s infinite;
+  filter: brightness(70%);
+  border-radius: 45px;
+  padding-top: 0%;
+}
+
+.GaleriaText {
+  padding: 0%;
+  font-size: 40px;
+}
+
+.GaleriaText h1 {
+  color: #54332b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fondoLoop {
+  0% {
+    background-image: url("");
+  }
+  33% {
+    background-image: url("");
+  }
+  66% {
+    background-image: url("");
+  }
+  100% {
+    background-image: url("");
+  }
+}
