@@ -84,6 +84,7 @@ const Home = () => {
         </div>
         <div className="GaleriaContainer">
           <img src="\src\Assets\brand\Diapositiva1.JPG" alt="Rol 1" />
+          <img src="" alt="" />
         </div>
       </div>
     </div>

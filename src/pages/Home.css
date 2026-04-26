@@ -121,7 +121,6 @@ h2 {
 .GaleriaContainer {
   background-size: contain;
   background-position: center;
-  animation: fondoLoop 15s infinite;
   filter: brightness(70%);
   border-radius: 45px;
   padding-top: 0%;
