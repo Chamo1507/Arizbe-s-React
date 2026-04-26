@@ -22,14 +22,14 @@ const Home = () => {
       <div className="secciones" id="PocoDeNosotros">
         <div className="PocoNosotrosText">
           <h1>Un Poco De Nososotros</h1>
-          <h2>
+          <p>
             Elaboramos nuestros productos con ingredientes de calidad, procesos
             tradicionales y el cuidado que solo el trabajo hecho a mano puede
             ofrecer. Nuestro objetivo es compartir sabores auténticos que
             recuerdan a lo casero, creando un espacio donde cada cliente pueda
             disfrutar del aroma, la calidez y la dedicación que ponemos en cada
             pieza recién horneada.
-          </h2>
+          </p>
         </div>
         <div className="IMGPocoDeNosotros">
           <img src="" alt="Rol 1" />
@@ -45,21 +45,21 @@ const Home = () => {
           <a href="#panaderia">
             <img src="" alt="Icono Panaderia" />
             <h1>Panaderia</h1>
-            <h2>Ver más</h2>
+            <p>Ver más</p>
           </a>
         </div>
         <div>
           <a href="#postres">
             <img src="" alt="Icono Postres" />
             <h1>Postres</h1>
-            <h2>Ver más</h2>
+            <p>Ver más</p>
           </a>
         </div>
         <div>
           <a href="#especiales">
             <img src="" alt="Icono Especiales" />
             <h1>Especiales de la casa</h1>
-            <h2>Ver más</h2>
+            <p>Ver más</p>
           </a>
         </div>
       </div>
