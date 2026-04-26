@@ -2,3 +2,25 @@
   padding: 60px 40px 50px;
   text-align: center;
 }
+
+.ph-contacto-introduccion h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 50px;
+  color: #943636;
+  margin-bottom: 14px;
+}
+
+.ph-contacto-introduccion p {
+  font-family: "BPMF Huninn", sans-serif;
+  font-size: 20px;
+  color: #7a6a57;
+  max-width: 1000px;
+  margin: 0 auto 12px;
+  line-height: 1.4;
+}
+
+.ph-contacto-introduccion h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 25px;
+  color: #3b2e22;
+}
