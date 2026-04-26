@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import "./Footer.css";
+import Icon from "../CIcons/Icon";
 import logoArizbes from "../../Assets/brand/LogoOnlyNombre_Invertido.png";
+import "./Footer.css";
+
 const links = [
   { to: "/", label: "Inicio" },
   { to: "/Producto", label: "Productos" },
@@ -32,21 +33,16 @@ const Footer = () => {
 
       <div className="right">
         <div className="icons">
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-
-          <a
-            href="https://wa.me/+522205199447"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faWhatsapp} />
-          </a>
+          <Icon
+            className="icon--whatsapp"
+            reference="https://www.instagram.com"
+            icontype={faWhatsapp}
+          />
+          <Icon
+            className="icon--Instagram"
+            reference="https://www.instagram.com"
+            icontype={faInstagram}
+          />
         </div>
       </div>
     </footer>
