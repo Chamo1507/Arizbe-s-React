@@ -83,8 +83,8 @@ const Home = () => {
           <h1>-- GALERIA --</h1>
         </div>
         <div className="GaleriaContainer">
-          {/*<img src="\src\Assets\brand\Diapositiva1.JPG" alt="Rol 1" />
-          <img src="\src\Assets\brand\Diapositiva2.JPG" alt="Rol 2" />*/}
+          <img src="\src\Assets\brand\Diapositiva1.JPG" alt="Rol 1" />
+          <img src="\src\Assets\brand\Diapositiva2.JPG" alt="Rol 2" />
         </div>
       </div>
     </div>
