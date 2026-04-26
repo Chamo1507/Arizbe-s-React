@@ -1,4 +1,3 @@
-import BannerOferta from "../components/ofertaBanner";
 import TarjetaProducto from "../components/TarjetaProducto";
 
 const Ofertas = () => {
