@@ -1,4 +1,8 @@
+import PHFormulario from "../components/PHFormulario/PHFormulario";
+import "./Contacto.css";
+
 const Contacto = () => {
-  return <div></div>;
+  return <PHFormulario />;
 };
+
 export default Contacto;
