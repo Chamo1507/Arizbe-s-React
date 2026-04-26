@@ -1,0 +1,168 @@
+/* Contacto */
+
+.contacto-main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 120px 30px 50px;
+}
+
+.contacto_encabezado {
+  grid-column: 1 / -1;
+  padding: 40px 40px 35px;
+  text-align: center;
+}
+
+.contacto_introduccion h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 50px;
+  color: #943636;
+  margin-bottom: 14px;
+}
+
+.contacto_introduccion p {
+  font-family: "BPMF Huninn", sans-serif;
+  font-size: 20px;
+  color: #7a6a57;
+  max-width: 1000px;
+  margin: 0 auto 12px;
+  line-height: 1.4;
+}
+
+.contacto_introduccion h3 {
+  font-family: "Satisfy", cursive;
+  font-size: 25px;
+  color: #3b2e22;
+}
+
+/* Formulario */
+
+.contacto-formulario-container {
+  background-color: #fffaf4;
+  border-radius: 8px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  grid-column: 1 / -1;
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contacto-formulario h2 {
+  font-family: "Satisfy", cursive;
+  font-size: 29px;
+  color: #943636;
+  margin-bottom: 6px;
+}
+
+.contacto-formulario p {
+  font-family: "BPMF Huninn", sans-serif;
+  color: #7a6a57;
+  margin-bottom: 24px;
+}
+
+.contacto-formulario fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-family: "BPMF Huninn", sans-serif;
+  font-size: 16px;
+  color: #3b2e22;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  background-color: #fff;
+  border: 1px solid #d9c9b0;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #3b2e22;
+  font-family: "BPMF Huninn", sans-serif;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Radio */
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #d9c9b0;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  font-family: "BPMF Huninn", sans-serif;
+  font-size: 16px;
+  color: #3b2e22;
+}
+
+.radio-item input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Dirección */
+
+.address-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .contacto-main {
+    grid-template-columns: 1fr;
+    padding: 100px 18px 40px;
+  }
+
+  .contacto_encabezado {
+    padding: 25px 10px;
+  }
+
+  .contacto_introduccion h1 {
+    font-size: 42px;
+  }
+
+  .contacto_introduccion p {
+    font-size: 17px;
+  }
+
+  .contacto-formulario-container {
+    padding: 28px 22px;
+  }
+
+  .address-grid {
+    grid-template-columns: 1fr;
+  }
+}
