@@ -13,7 +13,11 @@ const Home = () => {
 
         <main>
           <div className="container">
-            <img id="logoInicio" src="" alt="Logo Arizbes" />
+            <img
+              id="logoInicio"
+              src="src\Assets\brand\Logo_Arizbe's_invertido_Transparente.png"
+              alt="Logo Arizbes"
+            />
           </div>
         </main>
       </div>
@@ -32,10 +36,10 @@ const Home = () => {
           </p>
         </div>
         <div className="IMGPocoDeNosotros">
-          <img src="" alt="Rol 1" />
-          <img src="" alt="Rol 2" />
-          <img src="" alt="Rol 3" />
-          <img src="" alt="Rol 6" />
+          <img src="src\Assets\brand\rol1.jpeg" alt="Rol 1" />
+          <img src="src\Assets\brand\rol2.jpeg" alt="Rol 2" />
+          <img src="src\Assets\brand\rol3.jpeg" alt="Rol 3" />
+          <img src="src\Assets\brand\rol6.jpeg" alt="Rol 6" />
         </div>
       </div>
 
@@ -45,21 +49,21 @@ const Home = () => {
           <a href="#panaderia">
             <img src="" alt="Icono Panaderia" />
             <h1>Panaderia</h1>
-            <p>Ver más</p>
+            <h2>Ver más</h2>
           </a>
         </div>
         <div>
           <a href="#postres">
             <img src="" alt="Icono Postres" />
             <h1>Postres</h1>
-            <p>Ver más</p>
+            <h2>Ver más</h2>
           </a>
         </div>
         <div>
           <a href="#especiales">
             <img src="" alt="Icono Especiales" />
             <h1>Especiales de la casa</h1>
-            <p>Ver más</p>
+            <h2>Ver más</h2>
           </a>
         </div>
       </div>
