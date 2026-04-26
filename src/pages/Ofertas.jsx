@@ -1,11 +1,11 @@
-import BannerOferta from "../components/ofertaBanner";
-import TarjetaProducto from "../components/TarjetaProducto";
+/*import BannerOferta from "../components/ofertaBanner";
+import TarjetaProducto from "../components/TarjetaProducto";*/
 
 const Ofertas = () => {
   return (
     <>
       <main className="container">
-        <div className="grid-productos">
+        {/*<div className="grid-productos">
           <TarjetaProducto
             nombre="Roles de Canela (4 pack)"
             precioOriginal={120}
@@ -26,7 +26,7 @@ const Ofertas = () => {
             precioOferta={65}
             imagen="/2do_Proyecto_Arizbe-s/ASSETS/IMG/rol3.jpeg"
           />
-        </div>
+        </div>*/}
       </main>
     </>
   );
