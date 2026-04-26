@@ -4,11 +4,6 @@ import TarjetaProducto from "../components/TarjetaProducto";
 const Ofertas = () => {
   return (
     <>
-      <BannerOferta
-        titulo="Ofertas Tentadoras de Arizbe's"
-        mensaje="Disfruta del sabor casero al mejor precio. ¡Solo esta semana!"
-      />
-
       <main className="container">
         <div className="grid-productos">
           <TarjetaProducto
