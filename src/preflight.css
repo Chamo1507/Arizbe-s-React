@@ -17,6 +17,13 @@
   font-style: normal;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Satisfy&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   background-color: var(--color-scd);
 }
@@ -90,8 +97,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Satisfy", cursive;
   font-size: inherit;
   font-weight: inherit;
+}
+p {
+  font-family: "Balthazar", serif;
 }
 
 /*
