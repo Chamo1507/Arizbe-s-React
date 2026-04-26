@@ -21,7 +21,7 @@ const Home = () => {
       {/* Seccion Nosotros */}
       <div className="secciones" id="PocoDeNosotros">
         <div className="PocoNosotrosText">
-          <h1>Un poco de nososotros</h1>
+          <h1>Un Poco De Nososotros</h1>
           <h2>
             Elaboramos nuestros productos con ingredientes de calidad, procesos
             tradicionales y el cuidado que solo el trabajo hecho a mano puede
