@@ -11,6 +11,9 @@
   3. Reset all borders.
 */
 
+body {
+  background-color: var(--color-scd);
+}
 *,
 ::after,
 ::before,
@@ -33,7 +36,14 @@
 
   7. Disable tap highlights on iOS.
 */
-
+:root {
+  --color-text-main: #54332b;
+  --color-primary: #943636;
+  --color-accent: #b26b2f;
+  --color-bg: #ddcbad;
+  --color-scd: #f2e7d5;
+  --color-muted: #5f5949;
+}
 :root,
 :host {
   line-height: 1.5; /* 1 */
