@@ -1,4 +1,6 @@
+import Btn from "../Btn/Btn";
 import "./PHFormulario.css";
+
 const PHFormulario = () => {
   return (
     <section className="contacto-formulario-container">
@@ -134,7 +136,9 @@ const PHFormulario = () => {
               />
             </div>
 
-            {/* Aquí después ponemos tu componente BFormulario */}
+            <div className="btn-group">
+              <Btn tipo="submit" texto="Enviar Pedido" />
+            </div>
           </fieldset>
         </form>
       </div>
