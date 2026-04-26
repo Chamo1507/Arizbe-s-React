@@ -13,7 +13,11 @@ const Home = () => {
 
         <main>
           <div className="container">
-            <img id="logoInicio" src="" alt="Logo Arizbes" />
+            <img
+              id="logoInicio"
+              src="src\Assets\brand\Logo_Arizbe's_invertido_Transparente.png"
+              alt="Logo Arizbes"
+            />
           </div>
         </main>
       </div>
@@ -22,20 +26,20 @@ const Home = () => {
       <div className="secciones" id="PocoDeNosotros">
         <div className="PocoNosotrosText">
           <h1>Un Poco De Nososotros</h1>
-          <h2>
+          <p>
             Elaboramos nuestros productos con ingredientes de calidad, procesos
             tradicionales y el cuidado que solo el trabajo hecho a mano puede
             ofrecer. Nuestro objetivo es compartir sabores auténticos que
             recuerdan a lo casero, creando un espacio donde cada cliente pueda
             disfrutar del aroma, la calidez y la dedicación que ponemos en cada
             pieza recién horneada.
-          </h2>
+          </p>
         </div>
         <div className="IMGPocoDeNosotros">
-          <img src="" alt="Rol 1" />
-          <img src="" alt="Rol 2" />
-          <img src="" alt="Rol 3" />
-          <img src="" alt="Rol 6" />
+          <img src="src\Assets\brand\rol1.jpeg" alt="Rol 1" />
+          <img src="src\Assets\brand\rol2.jpeg" alt="Rol 2" />
+          <img src="src\Assets\brand\rol3.jpeg" alt="Rol 3" />
+          <img src="src\Assets\brand\rol6.jpeg" alt="Rol 6" />
         </div>
       </div>
 
