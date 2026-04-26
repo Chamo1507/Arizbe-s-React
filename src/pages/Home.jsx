@@ -13,7 +13,11 @@ const Home = () => {
 
         <main>
           <div className="container">
-            <img id="logoInicio" src="" alt="Logo Arizbes" />
+            <img
+              id="logoInicio"
+              src="src\Assets\brand\Logo_Arizbe's_invertido_Transparente.png"
+              alt="Logo Arizbes"
+            />
           </div>
         </main>
       </div>
@@ -32,10 +36,10 @@ const Home = () => {
           </h2>
         </div>
         <div className="IMGPocoDeNosotros">
-          <img src="" alt="Rol 1" />
-          <img src="" alt="Rol 2" />
-          <img src="" alt="Rol 3" />
-          <img src="" alt="Rol 6" />
+          <img src="src\Assets\brand\rol1.jpeg" alt="Rol 1" />
+          <img src="src\Assets\brand\rol2.jpeg" alt="Rol 2" />
+          <img src="src\Assets\brand\rol3.jpeg" alt="Rol 3" />
+          <img src="src\Assets\brand\rol4.jpeg" alt="Rol 6" />
         </div>
       </div>
 
@@ -43,21 +47,30 @@ const Home = () => {
       <div className="secciones" id="BannerContainer">
         <div>
           <a href="#panaderia">
-            <img src="" alt="Icono Panaderia" />
+            <img
+              src="src\Assets\brand\LogoHorno-removebg-preview.png"
+              alt="Icono Panaderia"
+            />
             <h1>Panaderia</h1>
             <h2>Ver más</h2>
           </a>
         </div>
         <div>
           <a href="#postres">
-            <img src="" alt="Icono Postres" />
+            <img
+              src="src\Assets\brand\LogoPostres-removebg-preview.png"
+              alt="Icono Postres"
+            />
             <h1>Postres</h1>
             <h2>Ver más</h2>
           </a>
         </div>
         <div>
           <a href="#especiales">
-            <img src="" alt="Icono Especiales" />
+            <img
+              src="src\Assets\brand\LogoBrownie-removebg-preview.png"
+              alt="Icono Especiales"
+            />
             <h1>Especiales de la casa</h1>
             <h2>Ver más</h2>
           </a>
@@ -69,7 +82,10 @@ const Home = () => {
         <div className="GaleriaText">
           <h1>-- GALERIA --</h1>
         </div>
-        <div className="GaleriaContainer"></div>
+        <div className="GaleriaContainer">
+          {/*<img src="\src\Assets\brand\Diapositiva1.JPG" alt="Rol 1" />
+          <img src="\src\Assets\brand\Diapositiva2.JPG" alt="Rol 2" />*/}
+        </div>
       </div>
     </div>
   );

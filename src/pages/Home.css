@@ -48,12 +48,14 @@
 }
 
 .PocoNosotrosText h1 {
+  font-family: "Satisfy", cursive;
   font-size: 50px;
   justify-content: center;
   color: #54332b;
 }
 
 .PocoNosotrosText h2 {
+  font-family: "Balthazar", serif;
   text-align: justify;
   line-height: 1.6;
   max-width: 500px;
@@ -132,30 +134,4 @@ h2 {
 
 .GaleriaText h1 {
   color: #54332b;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fondoLoop {
-  0% {
-    background-image: url("");
-  }
-  33% {
-    background-image: url("");
-  }
-  66% {
-    background-image: url("");
-  }
-  100% {
-    background-image: url("");
-  }
 }
