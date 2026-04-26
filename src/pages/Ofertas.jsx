@@ -1,4 +1,4 @@
-import TarjetaProducto from "../components/TarjetaProducto";
+import TarjetaProducto from "../components/TarjetaProducto/TarjetaProducto.jsx";
 
 const Ofertas = () => {
   return (
