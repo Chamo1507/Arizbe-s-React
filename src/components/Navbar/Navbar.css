@@ -18,7 +18,7 @@
 
 .navbar__container {
   position: relative;
-  max-width: 1100px;
+  max-width: 95vw;
   margin: 0 auto;
   padding: 0.65rem 1.25rem;
   display: flex;
