@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Icon";
+import "./Icon.css";
 const Icon = ({ reference, icontype, className = "" }) => {
   return (
     <a
