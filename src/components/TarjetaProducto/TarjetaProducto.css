@@ -1,0 +1,21 @@
+.cardOferta {
+  background-color: #ffffff;
+  border-radius: 25px; /* Bordes redondeados consistentes con tu diseño */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #f2e8d5; /* Un borde sutil crema */
+}
+
+.cardOferta img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}

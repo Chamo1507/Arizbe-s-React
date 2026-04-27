@@ -1,3 +1,5 @@
+import "./TarjetaProducto.css";
+
 const TarjetaProducto = ({ nombre, precioOriginal, precioOferta, imagen }) => {
   const descuento = Math.round(
     ((precioOriginal - precioOferta) / precioOriginal) * 100,
