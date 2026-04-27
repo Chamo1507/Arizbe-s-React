@@ -1,14 +1,15 @@
 import TarjetaProducto from "../components/TarjetaProducto/TarjetaProducto.jsx";
+import BannerTitulo from "../components/BannerTitulo/BannerTitulo";
 import "./Ofertas.css";
 const Ofertas = () => {
   return (
     <>
-    <BannerTitulo
-      titulo="Ofertas Especiales"
-      subtitulo="Descubre nuestras mejores ofertas"
-    />
+      <BannerTitulo
+        titulo="Ofertas Especiales"
+        subtitulo="Descubre nuestras mejores ofertas"
+      />
       <main className="container">
-        {/*<div className="grid-productos">
+        <div className="grid-productos">
           <TarjetaProducto
             nombre="Roles de Canela (4 pack)"
             precioOriginal={120}
@@ -50,7 +51,7 @@ const Ofertas = () => {
             precioOferta={85}
             imagen="/src/Assets/brand/galletas.jpeg"
           />
-        </div>*/}
+        </div>
       </main>
     </>
   );
