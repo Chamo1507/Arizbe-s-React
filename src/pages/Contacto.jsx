@@ -5,7 +5,10 @@ import "./Contacto.css";
 const Contacto = () => {
   return (
     <>
-      <BannerTitulo />
+      <BannerTitulo 
+        titulo="Contáctanos"
+        subtitulo="Estamos aquí para ayudarte"
+      />
       <PHFormulario />
     </>
   );

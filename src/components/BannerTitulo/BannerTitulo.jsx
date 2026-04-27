@@ -1,8 +1,8 @@
 import './BannerTitulo.css';
 
 const BannerTitulo = ({ 
-  titulo = "Nuestra Pasión por el Trigo", 
-  subtitulo = "Horneando momentos inolvidables desde el primer día." 
+   titulo, 
+   subtitulo  
 }) => {
   return (
     <section className="banner-titulo">
