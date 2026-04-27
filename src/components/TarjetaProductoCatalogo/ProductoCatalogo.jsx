@@ -26,3 +26,4 @@ const ProductoCatalogo = ({ imagen, imagenAlt, titulo, descripcion, precio, alAg
 }
 
 export default ProductoCatalogo
+
