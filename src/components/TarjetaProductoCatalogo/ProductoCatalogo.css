@@ -1,0 +1,57 @@
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+
+  background-color: var(--color-scd);
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.tarjeta-producto:hover {
+  box-shadow: 0 0 10px #aaa;
+}
+
+.tarjeta-producto__titulo {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-text-main);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tarjeta-producto__imagen {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background-color: var(--color-scd); 
+  border-radius: 4px;
+}
+
+.tarjeta-producto__descripcion {
+  font-size: 14px;
+  color: var(--color-text-main);
+  text-align: left;
+  line-height: 1.5;
+  width: 100%;
+  flex: 1;
+}
+
+.tarjeta-producto__precio {
+  font-family: "Satisfy", cursive;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-text-main);
+  display: block;
+  text-align: center;
+}
+
+.tarjeta-producto .btn-formulario {
+  width: 100%;
+  justify-content: center;
+}
