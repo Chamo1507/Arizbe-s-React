@@ -47,21 +47,30 @@ const Home = () => {
       <div className="secciones" id="BannerContainer">
         <div>
           <a href="#panaderia">
-            <img src="" alt="Icono Panaderia" />
+            <img
+              src="\src\Assets\brand\LogoHorno-removebg-preview.png"
+              alt="Icono Panaderia"
+            />
             <h1>Panaderia</h1>
             <h2>Ver más</h2>
           </a>
         </div>
         <div>
           <a href="#postres">
-            <img src="" alt="Icono Postres" />
+            <img
+              src="\src\Assets\brand\LogoPostres-removebg-preview.png"
+              alt="Icono Postres"
+            />
             <h1>Postres</h1>
             <h2>Ver más</h2>
           </a>
         </div>
         <div>
           <a href="#especiales">
-            <img src="" alt="Icono Especiales" />
+            <img
+              src="/src/Assets/brand/LogoBrownie-removebg-preview.png"
+              alt="Icono Especiales"
+            />
             <h1>Especiales de la casa</h1>
             <h2>Ver más</h2>
           </a>
@@ -71,7 +80,7 @@ const Home = () => {
       {/* Galeria */}
       <div className="secciones" id="Galeria">
         <div className="GaleriaText">
-          <h1>-- GALERIA --</h1>
+          <h1> GALERIA </h1>
         </div>
         <div className="GaleriaContainer"></div>
       </div>

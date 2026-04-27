@@ -1,0 +1,41 @@
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-producto__titulo {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-text-main);
+  text-align: center;
+}
+
+.tarjeta-producto__imagen {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.tarjeta-producto__descripcion {
+  font-size: 14px;
+  color: var(--color-muted);
+  text-align: left;
+  line-height: 1.5;
+}
+
+.tarjeta-producto__precio {
+  font-family: "Satisfy", cursive;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-text-main);
+}

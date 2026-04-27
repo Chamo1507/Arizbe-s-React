@@ -1,33 +1,28 @@
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
+.btn-formulario {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #943636;
+  color: #fff;
+  border: 2px solid #943636;
+  border-radius: 6px;
   font-size: 16px;
   font-family: "Balthazar", serif;
-  border-radius: 6px;
-  border: 2px solid transparent;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn--primary {
-  background-color: var(--color-primary);
-  color: var(--color-scd);
-  border-color: var(--color-primary);
+.btn-formulario:hover {
+  background-color: #7a2a2a;
+  transform: translateY(-1px);
 }
 
-.btn--primary:hover {
-  background-color: var(--color-text-main);
-  border-color: var(--color-text-main);
+.btn-formulario:active {
+  transform: translateY(0);
 }
 
 .btn-group {
   display: flex;
   gap: 10px;
   margin-top: 24px;
-}
-
-.btn-group .btn {
-  flex: 1;
 }

@@ -1,0 +1,41 @@
+.banner-titulo {
+  width: 95vw;
+  position: relative;
+  left: 50%;
+  margin-left: -47.5vw;
+  box-sizing: border-box;
+  background-color: #6d675b; 
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 250px;
+  border-radius: 5px 5px 50px 50px;
+}
+
+.banner-content h1 {
+  font-size: 4rem; 
+  margin-bottom: 15px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: #f2e7d5;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #f2e7d5;
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .banner-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
