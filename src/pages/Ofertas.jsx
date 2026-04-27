@@ -1,5 +1,5 @@
 import TarjetaProducto from "../components/TarjetaProducto/TarjetaProducto.jsx";
-
+import "./Ofertas.css";
 const Ofertas = () => {
   return (
     <>
@@ -16,7 +16,7 @@ const Ofertas = () => {
             nombre="Brownie Especial"
             precioOriginal={45}
             precioOferta={35}
-            imagen="\src\Assets\brand\LogoBrownie.png"
+            imagen="\src\Assets\brand\Brownies.jpeg"
           />
 
           <TarjetaProducto
@@ -24,6 +24,27 @@ const Ofertas = () => {
             precioOriginal={80}
             precioOferta={65}
             imagen="\src\Assets\brand\cuernitos.jpeg"
+          />
+
+          <TarjetaProducto
+            nombre="Cuernitos de Mantequilla (6 pack)"
+            precioOriginal={90}
+            precioOferta={70}
+            imagen="/src/Assets/brand/cuernitos.jpeg"
+          />
+
+          <TarjetaProducto
+            nombre="Rol Especial"
+            precioOriginal={55}
+            precioOferta={40}
+            imagen="/src/Assets/brand/rol7.jpeg"
+          />
+
+          <TarjetaProducto
+            nombre="Galletas de Chispas (Docena)"
+            precioOriginal={110}
+            precioOferta={85}
+            imagen="/src/Assets/brand/galletas.jpeg"
           />
         </div>
       </main>
