@@ -10,7 +10,7 @@
   margin: 20px auto;
   position: relative;
   height: 90vh;
-  border-radius: 40px; /* Ajusta este valor para que iguale la curva de tu menú */
+  border-radius: 40px;
   overflow: hidden;
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -92,11 +92,14 @@
 
 #BannerContainer {
   background-color: #54332b;
-  height: 250px;
+  width: 95%;
+  margin: 0 auto;
+  height: 350px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   place-items: center;
+  border-radius: 50px;
 }
 
 #BannerContainer img {
@@ -119,23 +122,24 @@ h2 {
 #Galeria {
   display: grid;
   grid-template-rows: 10% 90%;
-  padding: 1%;
-  padding-top: 0%;
-  gap: 10px;
+  padding: 0%;
+  padding-top: 2%;
+  padding-bottom: 7%;
+  gap: 40px;
   text-align: center;
 }
 
 .GaleriaContainer {
+  width: 95%;
+  margin: 0 auto;
   background-size: contain;
   background-position: center;
   animation: fondoLoop 15s infinite;
   filter: brightness(70%);
   border-radius: 45px;
-  padding-top: 0%;
 }
 
 .GaleriaText {
-  padding: 0%;
   font-size: 40px;
 }
 
@@ -156,15 +160,15 @@ h2 {
 
 @keyframes fondoLoop {
   0% {
-    background-image: url("");
+    background-image: url("/src/Assets/brand/Diapositiva1.JPG");
   }
   33% {
-    background-image: url("");
+    background-image: url("/src/Assets/brand/rol4.jpeg");
   }
   66% {
-    background-image: url("");
+    background-image: url("/src/Assets/brand/Diapositiva2.JPG");
   }
   100% {
-    background-image: url("");
+    background-image: url("/src/Assets/brand/Brownies.jpeg");
   }
 }

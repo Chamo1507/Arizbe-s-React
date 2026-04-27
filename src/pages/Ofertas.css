@@ -1,0 +1,15 @@
+.container {
+  min-height: 100vh;
+  width: 95%;
+  display: block;
+  padding: 5%;
+  margin: 20px auto;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin: 0px auto;
+}
