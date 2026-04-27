@@ -1,7 +1,7 @@
 import './TarjetaNosotros.css';
 
 const CardValor = ({ icono, titulo, descripcion }) => {
-  return (
+  return(
     <div className="value-card">
       <i className={icono}></i>
       <h3 className="satisfy-regular">{titulo}</h3>
