@@ -1,5 +1,5 @@
 import "./TarjetaProducto.css";
-
+import Btn from "../Btn/Btn.jsx";
 const TarjetaProducto = ({ nombre, precioOriginal, precioOferta, imagen }) => {
   const descuento = Math.round(
     ((precioOriginal - precioOferta) / precioOriginal) * 100,
@@ -16,7 +16,7 @@ const TarjetaProducto = ({ nombre, precioOriginal, precioOferta, imagen }) => {
           <p></p>
           <span className="precio-nuevo">Ahora: ${precioOferta}</span>
         </div>
-        <button className="btn-comprar">¡Ordenar ahora!</button>
+        <Btn texto="¡Ordenar ahora!" />
       </div>
     </div>
   );
