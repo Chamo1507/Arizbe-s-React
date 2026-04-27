@@ -1,8 +1,13 @@
 import TarjetaProducto from "../components/TarjetaProducto/TarjetaProducto.jsx";
+import BannerTitulo from "../components/BannerTitulo/BannerTitulo";
 import "./Ofertas.css";
 const Ofertas = () => {
   return (
     <>
+      <BannerTitulo
+        titulo="Ofertas Especiales"
+        subtitulo="Descubre nuestras mejores ofertas"
+      />
       <main className="container">
         <div className="grid-productos">
           <TarjetaProducto
