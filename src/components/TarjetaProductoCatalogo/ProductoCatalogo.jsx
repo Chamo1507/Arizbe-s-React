@@ -15,15 +15,16 @@ const ProductoCatalogo = ({ imagen, imagenAlt, titulo, descripcion, precio, alAg
       <p className="tarjeta-producto__descripcion">{descripcion}</p>
 
       <span className="tarjeta-producto__precio">{precio}</span>
-
+      
       <Btn
         texto="Agregar al Carrito"
         icono="carrito"
-        alHacerClick={alAgregarAlCarrito}
+        onClick={alAgregarAlCarrito}
       />
     </article>
   )
 }
 
 export default ProductoCatalogo
+
 
