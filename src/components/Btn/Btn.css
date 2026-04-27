@@ -1,0 +1,27 @@
+:root {
+  --color-primary-hover: #7a2a2a;
+}
+
+.btn {
+  display: inline-flex;    
+  align-items: center;
+  gap: 8px;                
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: inherit;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-scd);
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
