@@ -1,7 +1,9 @@
+import { useState } from "react";
+import { TrashIcon } from "@heroicons/react/24/solid";
+import "./Producto.css";
 import TarjetaProductoCatalogo from "../components/TarjetaProductoCatalogo/ProductoCatalogo.jsx";
 import BannerTitulo from "../components/BannerTitulo/BannerTitulo";
 import Btn from "../components/Btn/Btn";
-import "./Producto.css";
 
 const PRODUCTOS = [
   {
@@ -33,7 +35,7 @@ const PRODUCTOS = [
   },
   {
     id: 4,
-    titulo: 'Galletas "Nube" de Glaseado',
+    titulo: "Galletas 'Nube' de Glaseado",
     imagen: "/src/Assets/brand/galletas.jpeg",
     imagenAlt: "Galletas Nube",
     descripcion:
@@ -42,7 +44,7 @@ const PRODUCTOS = [
   },
   {
     id: 5,
-    titulo: 'Brownies "Fudge" de Cacao Intenso',
+    titulo: "Brownies 'Fudge' de Cacao Intenso",
     imagen: "/src/Assets/brand/Brownies.jpeg",
     imagenAlt: "Brownies Fudge",
     descripcion:
@@ -96,10 +98,9 @@ const Producto = () => {
   return (
     <main className="pagina-productos">
       <BannerTitulo
-        titulo="Producto"
+        titulo="Productos"
         subtitulo="Descubre nuestra selección de productos de calidad"
       />
-      <h1>Catálogo de Arizbe's</h1>
 
       <div className="contenedor">
         <div className="catalogo">
@@ -116,27 +117,31 @@ const Producto = () => {
           ))}
         </div>
 
-        {carrito.length > 0 && (
-          <aside className="carrito">
-            <div className="carrito__header">
-              <h2>Tu Carrito</h2>
-            </div>
+        <aside className="carrito">
+          <div className="carrito__header">
+            <h2>Tu Carrito</h2>
+          </div>
 
-            <div className="carrito__items">
-              {carrito.map((item) => (
+          <div className="carrito__items">
+            {carrito.length === 0 ? (
+              <p className="carrito__vacio">Tu carrito está vacío</p>
+            ) : (
+              carrito.map((item) => (
                 <div key={item.id} className="carrito__item">
                   <img src={item.imagen} alt={item.imagenAlt} width={80} />
 
                   <div className="carrito__item-detalles">
                     <span className="carrito__item-titulo">{item.titulo}</span>
                     <div className="carrito__selector-cantidad">
-                      <button onClick={() => cambiarCantidad(item.id, -1)}>
-                        −
-                      </button>
+                      <button
+                        className="carrito__btn-cantidad"
+                        onClick={() => cambiarCantidad(item.id, -1)}
+                      >−</button>
                       <span>{item.cantidad}</span>
-                      <button onClick={() => cambiarCantidad(item.id, +1)}>
-                        +
-                      </button>
+                      <button
+                        className="carrito__btn-cantidad"
+                        onClick={() => cambiarCantidad(item.id, +1)}
+                      >+</button>
                     </div>
                     <span className="carrito__item-precio">
                       ${item.precio * item.cantidad}.00
@@ -147,21 +152,23 @@ const Producto = () => {
                     className="carrito__btn-eliminar"
                     onClick={() => eliminarDelCarrito(item.id)}
                   >
-                    🗑
+                    <TrashIcon width={16} />
                   </button>
                 </div>
-              ))}
-            </div>
+              ))
+            )}
+          </div>
 
-            <div className="carrito__total">
-              <div className="carrito__total-fila">
-                <strong>Tu Total</strong>
-                <span>${total.toLocaleString("es")}.00</span>
-              </div>
-              <Btn texto="Pagar" icono="pago" tipo="button" onClick={pagar} />
+          <div className="carrito__total">
+            <div className="carrito__total-fila">
+              <strong>Tu Total</strong>
+              <span>${total.toLocaleString("es")}.00</span>
             </div>
-          </aside>
-        )}
+            <Btn className="carrito__btn-pagar" onClick={pagar}>
+              Pagar
+            </Btn>
+          </div>
+        </aside>
       </div>
     </main>
   );
