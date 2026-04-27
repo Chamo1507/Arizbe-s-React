@@ -4,6 +4,7 @@ import TarjetaNosotros from "../components/TarjetaNostros/TarjetaNosotros";
 import "./Nosotros.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const Nosotros = () => {
   return (
     <main className='pagina-nosotros'>
