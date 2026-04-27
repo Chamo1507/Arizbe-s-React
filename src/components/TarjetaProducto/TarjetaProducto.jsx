@@ -1,3 +1,5 @@
+import "./TarjetaProducto.css";
+
 const TarjetaProducto = ({ nombre, precioOriginal, precioOferta, imagen }) => {
   const descuento = Math.round(
     ((precioOriginal - precioOferta) / precioOriginal) * 100,
@@ -5,14 +7,17 @@ const TarjetaProducto = ({ nombre, precioOriginal, precioOferta, imagen }) => {
 
   return (
     <div className="cardOferta">
-      <div className="badge-descuento">-{descuento}%</div>
       <img src={imagen} alt={nombre} className="img-producto" />
-      <h1>{nombre}</h1>
-      <div className="precios">
-        <span className="precio-viejo">${precioOriginal}</span>
-        <span className="precio-nuevo">${precioOferta}</span>
+      <div className="container-cardText">
+        <div className="badge-descuento">-{descuento}%</div>
+        <h1>{nombre}</h1>
+        <div className="precios">
+          <span className="precio-viejo">Antes: ${precioOriginal}</span>
+          <p></p>
+          <span className="precio-nuevo">Ahora: ${precioOferta}</span>
+        </div>
+        <button className="btn-comprar">¡Ordenar ahora!</button>
       </div>
-      <button className="btn-comprar">¡Ordenar ahora!</button>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.ph-direccion {
+  font-family: "BPMF Huninn", sans-serif;
+}
+
+.ph-direccion h4 {
+  font-family: "Satisfy", cursive;
+  font-size: 18px;
+  color: #943636;
+  margin-bottom: 8px;
+}
+
+.ph-direccion address {
+  font-style: normal;
+  color: #3b2e22;
+  font-size: 16px;
+  line-height: 1.5;
+}

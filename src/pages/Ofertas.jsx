@@ -1,7 +1,5 @@
-/*import BannerOferta from "../components/ofertaBanner";
-import TarjetaProducto from "../components/TarjetaProducto";*/
-import BannerTitulo from "../components/BannerTitulo/BannerTitulo";
-
+import TarjetaProducto from "../components/TarjetaProducto/TarjetaProducto.jsx";
+import "./Ofertas.css";
 const Ofertas = () => {
   return (
     <>
@@ -15,21 +13,42 @@ const Ofertas = () => {
             nombre="Roles de Canela (4 pack)"
             precioOriginal={120}
             precioOferta={90}
-            imagen="/2do_Proyecto_Arizbe-s/ASSETS/IMG/rol1.jpeg"
+            imagen="\src\Assets\brand\rol1.jpeg"
           />
 
           <TarjetaProducto
             nombre="Brownie Especial"
             precioOriginal={45}
             precioOferta={35}
-            imagen="/2do_Proyecto_Arizbe-s/ASSETS/IMG/LogoBrownie-removebg-preview.png"
+            imagen="\src\Assets\brand\Brownies.jpeg"
           />
 
           <TarjetaProducto
             nombre="Pan de Caja Artesanal"
             precioOriginal={80}
             precioOferta={65}
-            imagen="/2do_Proyecto_Arizbe-s/ASSETS/IMG/rol3.jpeg"
+            imagen="\src\Assets\brand\cuernitos.jpeg"
+          />
+
+          <TarjetaProducto
+            nombre="Cuernitos de Mantequilla (6 pack)"
+            precioOriginal={90}
+            precioOferta={70}
+            imagen="/src/Assets/brand/cuernitos.jpeg"
+          />
+
+          <TarjetaProducto
+            nombre="Rol Especial"
+            precioOriginal={55}
+            precioOferta={40}
+            imagen="/src/Assets/brand/rol7.jpeg"
+          />
+
+          <TarjetaProducto
+            nombre="Galletas de Chispas (Docena)"
+            precioOriginal={110}
+            precioOferta={85}
+            imagen="/src/Assets/brand/galletas.jpeg"
           />
         </div>*/}
       </main>
