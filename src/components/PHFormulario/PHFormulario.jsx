@@ -27,9 +27,28 @@ const PHFormulario = () => {
     });
   };
 
-  // 4. Función para procesar y enviar los datos a tu futura DB
+  // 5. Función para procesar y enviar los datos a tu futura DB
   const handleSubmit = async (e) => {
     e.preventDefault(); // Evita que la página se recargue
+
+    const formulario = e.target; // Referencia al <form>
+
+  if (!formulario.checkValidity()) {
+    // Mensaje de error si faltan campos obligatorios
+    alert("El formulario no se ha podido enviar debido a que faltan campos obligatorios por llenar. Por favor, inténtalo de nuevo.");
+    formulario.reportValidity(); // Resalta los campos que faltan
+    return; //Detiene el envío
+  }
+
+  // Mensaje si el formulario está completo
+  alert("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
+  
+  // Resetea los datos después de enviar
+  setFormData({
+    nombre: "", email: "", telefono: "", tipo_pedido: "",
+    detalles: "", calle: "", numero: "", codigo_postal: "",
+    ciudad: "", fecha: "", presupuesto: "",
+  });
 
     console.log("Datos listos para enviar a la DB:", formData);
 
@@ -252,7 +271,9 @@ const PHFormulario = () => {
               />
             </div>
           </fieldset>
-          <Btn texto="Guardar Información"></Btn>
+          <Btn 
+          texto="Guardar Información"
+          OnClick={handleSubmit}></Btn>
         </form>
       </div>
     </section>
