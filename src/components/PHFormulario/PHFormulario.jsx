@@ -86,23 +86,22 @@ const PHFormulario = () => {
   return (
     <section className="contacto-formulario-container">
       <div className="contacto-formulario">
-        <h2>Formulario de Contacto</h2>
-        <p>
+        <p><strong>
           ¡Queremos saber de ti! Escríbenos y nos pondremos en contacto contigo.
-        </p>
+        </strong></p>
 
         {/* Añadimos el evento onSubmit aquí */}
         <form id="formulario" onSubmit={handleSubmit} noValidate> {/* Usamos noValidate para manejar la validación manual con useState */}
           <fieldset>
             {/* Nombre completo */}
-            <div className="form-group">
+            <div className="form-group full-width">
               <label htmlFor="nombre">Nombre completo</label>
               <input
                 type="text"
                 id="nombre"
                 name="nombre"
                 value={formData.nombre} // Vinculado al estado
-                onChange={handleChange} // Escucha cambios
+                onChange={handleChange} 
                 placeholder="Fulanito Pérez"
               />
             </div>
@@ -133,16 +132,16 @@ const PHFormulario = () => {
               />
             </div>
 
-            {/* Tipo de pedido (Radio buttons arreglados) */}
-            <div className="form-group">
+            {/* Tipo de pedido */}
+            <div className="form-group full-width">
               <label>Tipo de pedido</label>
               <div className="radio-group">
                 <label className="radio-item">
                   <input
                     type="radio"
                     name="tipo_pedido"
-                    value="Pan tradicional" // El value debe ser el string real que guardarás
-                    checked={formData.tipo_pedido === "Pan tradicional"} // Controla cuál está marcado
+                    value="Pan tradicional" 
+                    checked={formData.tipo_pedido === "Pan tradicional"} 
                     onChange={handleChange}
                   />
                   Pan tradicional
@@ -184,7 +183,7 @@ const PHFormulario = () => {
             </div>
 
             {/* Detalles */}
-            <div className="form-group">
+            <div className="form-group full-width">
               <label htmlFor="detalles">Detalles del pedido</label>
               <textarea
                 id="detalles"
@@ -196,8 +195,8 @@ const PHFormulario = () => {
               ></textarea>
             </div>
 
-            {/* Dirección Grid */}
-            <div className="address-grid">
+            {/* Dirección */}
+            <div className="address-grid full-width">
               <div className="form-group">
                 <label htmlFor="calle">Calle</label>
                 <input
@@ -232,15 +231,10 @@ const PHFormulario = () => {
               </div>
             </div>
 
-            {/* Ciudad (Corregido: El value y onChange van en el select) */}
+            <div className="address-grid full-width">
             <div className="form-group">
               <label htmlFor="ciudad">Ciudad</label>
-              <select
-                id="ciudad"
-                name="ciudad"
-                value={formData.ciudad}
-                onChange={handleChange}
-              >
+              <select id="ciudad" name="ciudad" value={formData.ciudad} onChange={handleChange}>
                 <option value="">Selecciona una ciudad</option>
                 <option value="Puebla">Puebla</option>
                 <option value="Ciudad de México">Ciudad de México</option>
@@ -248,30 +242,16 @@ const PHFormulario = () => {
               </select>
             </div>
 
-            {/* Fecha de entrega */}
             <div className="form-group">
               <label htmlFor="fecha">Fecha de entrega</label>
-              <input
-                type="date"
-                id="fecha"
-                name="fecha"
-                value={formData.fecha}
-                onChange={handleChange}
-              />
+              <input type="date" id="fecha" name="fecha" value={formData.fecha} onChange={handleChange} />
             </div>
 
-            {/* Presupuesto */}
             <div className="form-group">
               <label htmlFor="presupuesto">Presupuesto estimado MXN</label>
-              <input
-                type="number"
-                id="presupuesto"
-                name="presupuesto"
-                value={formData.presupuesto}
-                onChange={handleChange}
-                placeholder="0.00"
-              />
+              <input type="number" id="presupuesto" name="presupuesto" value={formData.presupuesto} onChange={handleChange} placeholder="0.00" />
             </div>
+          </div>
           </fieldset>
           <Btn 
             texto="Guardar Información"
