@@ -1,16 +1,80 @@
-# React + Vite
+# Arizbe's - Repostería Artesanal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web oficial para la repostería y panadería artesanal Arizbe's, diseñado para transmitir tradición, calidad y el sabor de hogar mediante una experiencia digital moderna y responsiva
 
-Currently, two official plugins are available:
+# Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este proyecto ha evolucionado de una práctica académica estática a una aplicación web dinámica desarrollada con React y Vite. La plataforma permite a los usuarios explorar el catálogo de productos, conocer la filosofía de la marca y gestionar pedidos mediante una interfaz intuitiva y eficiente.
 
-## React Compiler
+El enfoque actual prioriza la arquitectura de componentes, la escalabilidad y la mantenibilidad del código.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+Frontend: React, JavaScript (ES6+), Vite.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Estilos: CSS3 (Módulos CSS para encapsulamiento), Flexbox y CSS Grid.
+
+Enrutamiento: React Router DOM.
+
+Herramientas: ESLint, Prettier (estandarización de código).
+
+# Requisitos Previos
+
+Node.js (v18+ recomendado)
+
+npm o yarn
+
+Editor de código: Visual Studio Code (Recomendado).
+
+# Instalación y Configuración
+
+# Clona este repositorio:
+
+Clona este repositorio o descarga el archivo ZIP del proyecto.
+git clone git@github.com:Chamo1507/Arizbe-s-React.git
+
+# Instala las dependencias:
+
+npm install
+
+# Ejecuta el servidor de desarrollo:
+
+npm run dev
+
+# Abre la dirección proporcionada por Vite en tu navegador
+
+# Uso
+
+Utiliza el menú de navegación superior para moverte entre Inicio, Productos, Nosotros, Ofertas y Contáctanos.
+
+En la sección de Nosotros, conoce la misión y los valores que definen a Arizbe's.
+
+Usa los enlaces del pie de página para acceder directamente a redes sociales o WhatsApp.
+
+# Características
+
+Arquitectura de Componentes: Estructura modular para facilitar el mantenimiento y la reutilización de elementos.
+
+Diseño Responsivo: Interfaz adaptativa optimizada para dispositivos móviles y de escritorio.
+
+Navegación Fluida: Implementación de rutas SPA (Single Page Application) para una carga rápida sin recargas de página.
+
+UX enfocada: Identidad visual coherente con paleta de colores cálida (Beige, Café y Vinotinto).
+
+Integración: Enlaces directos a WhatsApp para gestión simplificada de pedidos.
+
+# Autores
+
+-Armando Imanol Aguilar Espiricueto
+-Samuel Ramirez Bueno
+-Maria Jose Espinosa Minjares
+-Amauri Mendez Montejo
+-Moisés Medina Sánchez
+
+# Correos
+
+-imanolaguilare@gmial.com
+-samuel-ramirez@umad.edu.mx
+-majoespimin06@gmail.com
+-amauri.montejoo@gmail.com
+-px4webs@gmail.com
