@@ -18,6 +18,8 @@ const PHFormulario = () => {
     presupuesto: "",
   });
 
+  const [formularioEnviado, setFormularioEnviado] = useState(false);
+
   // 3. Función para capturar todo lo que el usuario escribe o selecciona
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,28 +29,39 @@ const PHFormulario = () => {
     });
   };
 
-  // 5. Función para procesar y enviar los datos a tu futura DB
+  // 5. Función para procesar y enviar los datos a la futura DB
   const handleSubmit = async (e) => {
     e.preventDefault(); // Evita que la página se recargue
 
-    const formulario = e.target; // Referencia al <form>
+    const formulario = e.target; 
 
-  if (!formulario.checkValidity()) {
-    // Mensaje de error si faltan campos obligatorios
-    alert("El formulario no se ha podido enviar debido a que faltan campos obligatorios por llenar. Por favor, inténtalo de nuevo.");
-    formulario.reportValidity(); // Resalta los campos que faltan
-    return; //Detiene el envío
-  }
+    // useState para ver si el formulario es válido
+    const esValido = Object.values(formData).every((campo) => campo.trim() !== "");
 
-  // Mensaje si el formulario está completo
-  alert("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
-  
-  // Resetea los datos después de enviar
-  setFormData({
-    nombre: "", email: "", telefono: "", tipo_pedido: "",
-    detalles: "", calle: "", numero: "", codigo_postal: "",
-    ciudad: "", fecha: "", presupuesto: "",
-  });
+    if (!esValido) {
+      alert("El formulario no se ha podido enviar porque faltan campos obligatorios. Por favor, inténtalo de nuevo.");
+      return;
+    }
+
+    // Formulario validado
+    alert("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
+
+    // Resetea el formulario usando useState
+    setFormularioEnviado(true); // marca como enviado
+    setFormData({
+      nombre: "", 
+      email: "", 
+      telefono: "", 
+      tipo_pedido: "",
+      detalles: "", 
+      calle: "", 
+      numero: "", 
+      codigo_postal: "",
+      ciudad: "", 
+      fecha: "", 
+      presupuesto: ""
+    });
+    setFormularioEnviado(false); // vuelve al estado inicial
 
     console.log("Datos listos para enviar a la DB:", formData);
 
@@ -79,7 +92,7 @@ const PHFormulario = () => {
         </p>
 
         {/* Añadimos el evento onSubmit aquí */}
-        <form id="formulario" onSubmit={handleSubmit}>
+        <form id="formulario" onSubmit={handleSubmit} noValidate> {/* Usamos noValidate para manejar la validación manual con useState */}
           <fieldset>
             {/* Nombre completo */}
             <div className="form-group">
@@ -91,7 +104,6 @@ const PHFormulario = () => {
                 value={formData.nombre} // Vinculado al estado
                 onChange={handleChange} // Escucha cambios
                 placeholder="Fulanito Pérez"
-                required
               />
             </div>
 
@@ -105,7 +117,6 @@ const PHFormulario = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="fulanito_perez@gmail.com"
-                required
               />
             </div>
 
@@ -119,7 +130,6 @@ const PHFormulario = () => {
                 value={formData.telefono}
                 onChange={handleChange}
                 placeholder="+52 222 123 4567"
-                required
               />
             </div>
 
@@ -134,7 +144,6 @@ const PHFormulario = () => {
                     value="Pan tradicional" // El value debe ser el string real que guardarás
                     checked={formData.tipo_pedido === "Pan tradicional"} // Controla cuál está marcado
                     onChange={handleChange}
-                    required
                   />
                   Pan tradicional
                 </label>
@@ -184,7 +193,6 @@ const PHFormulario = () => {
                 value={formData.detalles}
                 onChange={handleChange}
                 placeholder="Sabores, cantidades, fecha, decoración, etc."
-                required
               ></textarea>
             </div>
 
@@ -198,7 +206,6 @@ const PHFormulario = () => {
                   name="calle"
                   value={formData.calle}
                   onChange={handleChange}
-                  required
                 />
               </div>
 
@@ -210,7 +217,6 @@ const PHFormulario = () => {
                   name="numero"
                   value={formData.numero}
                   onChange={handleChange}
-                  required
                 />
               </div>
 
@@ -222,7 +228,6 @@ const PHFormulario = () => {
                   name="codigo_postal"
                   value={formData.codigo_postal}
                   onChange={handleChange}
-                  required
                 />
               </div>
             </div>
@@ -235,7 +240,6 @@ const PHFormulario = () => {
                 name="ciudad"
                 value={formData.ciudad}
                 onChange={handleChange}
-                required
               >
                 <option value="">Selecciona una ciudad</option>
                 <option value="Puebla">Puebla</option>
@@ -253,7 +257,6 @@ const PHFormulario = () => {
                 name="fecha"
                 value={formData.fecha}
                 onChange={handleChange}
-                required
               />
             </div>
 
@@ -267,13 +270,12 @@ const PHFormulario = () => {
                 value={formData.presupuesto}
                 onChange={handleChange}
                 placeholder="0.00"
-                required
               />
             </div>
           </fieldset>
           <Btn 
-          texto="Guardar Información"
-          OnClick={handleSubmit}></Btn>
+            texto="Guardar Información"
+            tipo="submit"></Btn>
         </form>
       </div>
     </section>
