@@ -33,54 +33,50 @@ const PHFormulario = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Evita que la página se recargue
 
-    const formulario = e.target; 
-
-    // useState para ver si el formulario es válido
-    const esValido = Object.values(formData).every((campo) => campo.trim() !== "");
+    // Validar que no haya campos vacíos
+    const esValido = Object.values(formData).every((campo) => String(campo).trim() !== "");
 
     if (!esValido) {
       alert("El formulario no se ha podido enviar porque faltan campos obligatorios. Por favor, inténtalo de nuevo.");
       return;
     }
 
-    // Formulario validado
-    alert("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
-
-    // Resetea el formulario usando useState
-    setFormularioEnviado(true); // marca como enviado
-    setFormData({
-      nombre: "", 
-      email: "", 
-      telefono: "", 
-      tipo_pedido: "",
-      detalles: "", 
-      calle: "", 
-      numero: "", 
-      codigo_postal: "",
-      ciudad: "", 
-      fecha: "", 
-      presupuesto: ""
-    });
-    setFormularioEnviado(false); // vuelve al estado inicial
-
-    console.log("Datos listos para enviar a la DB:", formData);
-
-    /* 
-    CONEXIÓN A TU FUTURA BASE DE DATOS (Ejemplo con fetch/axios):
     try {
-      const response = await fetch('TU_API_URL/pedidos', {
+      // Petición real al backend
+      const response = await fetch('http://localhost:3001/contactos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
       
       if (response.ok) {
-        alert('¡Pedido guardado en la base de datos!');
+        alert('¡Gracias! Tu pedido ha sido guardado exitosamente en la base de datos.');
+        
+        // Resetea el formulario
+        setFormularioEnviado(true);
+        setFormData({
+          nombre: "", 
+          email: "", 
+          telefono: "", 
+          tipo_pedido: "",
+          detalles: "", 
+          calle: "", 
+          numero: "", 
+          codigo_postal: "",
+          ciudad: "", 
+          fecha: "", 
+          presupuesto: ""
+        });
+        setFormularioEnviado(false);
+      } else {
+        const err = await response.json();
+        alert('Hubo un problema al guardar: ' + (err.message || 'Verifica tus datos.'));
+        console.error("Error del servidor:", err);
       }
     } catch (error) {
       console.error('Error al enviar los datos:', error);
+      alert('Error de red. Asegúrate de que el backend esté corriendo.');
     }
-    */
   };
 
   return (
