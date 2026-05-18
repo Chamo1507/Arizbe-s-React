@@ -1,21 +1,22 @@
 import React, { useState } from "react"; // 1. Importamos useState
 import "./PHFormulario.css";
 import Btn from "../Btn/Btn.jsx";
+import axios from "axios";
 
 const PHFormulario = () => {
   // 2. Creamos un estado único para recolectar toda la información del formulario
   const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    telefono: "",
-    tipo_pedido: "",
-    detalles: "",
-    calle: "",
-    numero: "",
-    codigo_postal: "",
-    ciudad: "",
-    fecha: "",
-    presupuesto: "",
+    Nombre: "",
+    Email: "",
+    Telefono: "",
+    Tipo_Pedido: "",
+    Detalle_Pedido: "",
+    Calle: "",
+    Num: "",
+    CP: "",
+    Ciudad: "",
+    Fecha_Entrega: "",
+    Presupuesto: "",
   });
 
   // 3. Función para capturar todo lo que el usuario escribe o selecciona
@@ -39,37 +40,32 @@ const PHFormulario = () => {
     formulario.reportValidity(); // Resalta los campos que faltan
     return; //Detiene el envío
   }
-
-  // Mensaje si el formulario está completo
-  alert("¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.");
   
-  // Resetea los datos después de enviar
-  setFormData({
-    nombre: "", email: "", telefono: "", tipo_pedido: "",
-    detalles: "", calle: "", numero: "", codigo_postal: "",
-    ciudad: "", fecha: "", presupuesto: "",
-  });
+  console.log("Datos listos para enviar a la DB:", formData);
 
-    console.log("Datos listos para enviar a la DB:", formData);
-
-    /* 
-    CONEXIÓN A TU FUTURA BASE DE DATOS (Ejemplo con fetch/axios):
     try {
-      const response = await fetch('TU_API_URL/pedidos', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+      // 2. CORREGIDO: Enviamos los datos REALES antes de limpiar el estado
+      console.log("Enviando datos a la DB...", formData);
+      const response = await axios.post('http://localhost:3000/contact', formData);
       
-      if (response.ok) {
-        alert('¡Pedido guardado en la base de datos!');
+      // 3. CORREGIDO: Axios maneja la respuesta exitosa si entra al bloque try. 
+      // NestJS devuelve un status 201 Created por defecto para POST.
+      if (response.status === 201 || response.status === 200) {
+        alert("¡Gracias por contactarnos! Tu pedido ha sido guardado con éxito.");
+        
+        // 4. CORREGIDO: Reseteamos el estado del formulario SOLÓ si la DB lo aceptó con éxito
+        setFormData({
+          Nombre: "", Email: "", Telefono: "", Tipo_Pedido: "",
+          Detalle_Pedido: "", Calle: "", Num: "", CP: "",
+          Ciudad: "", Fecha_Entrega: "", Presupuesto: "",
+        });
       }
     } catch (error) {
       console.error('Error al enviar los datos:', error);
+      alert("Hubo un error al conectar con el servidor. Por favor, inténtalo más tarde.");
     }
-    */
   };
-
+  
   return (
     <section className="contacto-formulario-container">
       <div className="contacto-formulario">
@@ -86,9 +82,9 @@ const PHFormulario = () => {
               <label htmlFor="nombre">Nombre completo</label>
               <input
                 type="text"
-                id="nombre"
-                name="nombre"
-                value={formData.nombre} // Vinculado al estado
+                id="Nombre"
+                name="Nombre"
+                value={formData.Nombre} 
                 onChange={handleChange} // Escucha cambios
                 placeholder="Fulanito Pérez"
                 required
@@ -100,9 +96,9 @@ const PHFormulario = () => {
               <label htmlFor="email">Correo Electrónico</label>
               <input
                 type="email"
-                id="email"
-                name="email"
-                value={formData.email}
+                id="Email"
+                name="Email"
+                value={formData.Email}
                 onChange={handleChange}
                 placeholder="fulanito_perez@gmail.com"
                 required
@@ -114,9 +110,9 @@ const PHFormulario = () => {
               <label htmlFor="telefono">Teléfono</label>
               <input
                 type="tel"
-                id="telefono"
-                name="telefono"
-                value={formData.telefono}
+                id="Telefono"
+                name="Telefono"
+                value={formData.Telefono}
                 onChange={handleChange}
                 placeholder="+52 222 123 4567"
                 required
@@ -130,9 +126,9 @@ const PHFormulario = () => {
                 <label className="radio-item">
                   <input
                     type="radio"
-                    name="tipo_pedido"
+                    name="Tipo_Pedido"
                     value="Pan tradicional" // El value debe ser el string real que guardarás
-                    checked={formData.tipo_pedido === "Pan tradicional"} // Controla cuál está marcado
+                    checked={formData.Tipo_Pedido === "Pan tradicional"} // Controla cuál está marcado
                     onChange={handleChange}
                     required
                   />
@@ -142,9 +138,9 @@ const PHFormulario = () => {
                 <label className="radio-item">
                   <input
                     type="radio"
-                    name="tipo_pedido"
+                    name="Tipo_Pedido"
                     value="Pastel personalizado"
-                    checked={formData.tipo_pedido === "Pastel personalizado"}
+                    checked={formData.Tipo_Pedido === "Pastel personalizado"}
                     onChange={handleChange}
                   />
                   Pastel personalizado
@@ -153,9 +149,9 @@ const PHFormulario = () => {
                 <label className="radio-item">
                   <input
                     type="radio"
-                    name="tipo_pedido"
+                    name="Tipo_Pedido"
                     value="Postres"
-                    checked={formData.tipo_pedido === "Postres"}
+                    checked={formData.Tipo_Pedido === "Postres"}
                     onChange={handleChange}
                   />
                   Postres
@@ -164,9 +160,9 @@ const PHFormulario = () => {
                 <label className="radio-item">
                   <input
                     type="radio"
-                    name="tipo_pedido"
+                    name="Tipo_Pedido"
                     value="Evento especial"
-                    checked={formData.tipo_pedido === "Evento especial"}
+                    checked={formData.Tipo_Pedido === "Evento especial"}
                     onChange={handleChange}
                   />
                   Evento especial
@@ -178,10 +174,10 @@ const PHFormulario = () => {
             <div className="form-group">
               <label htmlFor="detalles">Detalles del pedido</label>
               <textarea
-                id="detalles"
-                name="detalles"
+                id="Detalle_Pedido"
+                name="Detalle_Pedido"
                 rows="5"
-                value={formData.detalles}
+                value={formData.Detalle_Pedido}
                 onChange={handleChange}
                 placeholder="Sabores, cantidades, fecha, decoración, etc."
                 required
@@ -194,9 +190,9 @@ const PHFormulario = () => {
                 <label htmlFor="calle">Calle</label>
                 <input
                   type="text"
-                  id="calle"
-                  name="calle"
-                  value={formData.calle}
+                  id="Calle"
+                  name="Calle"
+                  value={formData.Calle}
                   onChange={handleChange}
                   required
                 />
@@ -206,9 +202,9 @@ const PHFormulario = () => {
                 <label htmlFor="numero">N°</label>
                 <input
                   type="text"
-                  id="numero"
-                  name="numero"
-                  value={formData.numero}
+                  id="Num"
+                  name="Num"
+                  value={formData.Num}
                   onChange={handleChange}
                   required
                 />
@@ -218,9 +214,9 @@ const PHFormulario = () => {
                 <label htmlFor="codigo_postal">CP</label>
                 <input
                   type="text"
-                  id="codigo_postal"
-                  name="codigo_postal"
-                  value={formData.codigo_postal}
+                  id="CP"
+                  name="CP"
+                  value={formData.CP}
                   onChange={handleChange}
                   required
                 />
@@ -231,9 +227,9 @@ const PHFormulario = () => {
             <div className="form-group">
               <label htmlFor="ciudad">Ciudad</label>
               <select
-                id="ciudad"
-                name="ciudad"
-                value={formData.ciudad}
+                id="Ciudad"
+                name="Ciudad"
+                value={formData.Ciudad}
                 onChange={handleChange}
                 required
               >
@@ -249,9 +245,9 @@ const PHFormulario = () => {
               <label htmlFor="fecha">Fecha de entrega</label>
               <input
                 type="date"
-                id="fecha"
-                name="fecha"
-                value={formData.fecha}
+                id="Fecha_Entrega"
+                name="Fecha_Entrega"
+                value={formData.Fecha_Entrega}
                 onChange={handleChange}
                 required
               />
@@ -262,18 +258,17 @@ const PHFormulario = () => {
               <label htmlFor="presupuesto">Presupuesto estimado MXN</label>
               <input
                 type="number"
-                id="presupuesto"
-                name="presupuesto"
-                value={formData.presupuesto}
+                id="Presupuesto"
+                name="Presupuesto"
+                value={formData.Presupuesto}
                 onChange={handleChange}
                 placeholder="0.00"
                 required
               />
             </div>
           </fieldset>
-          <Btn 
-          texto="Guardar Información"
-          OnClick={handleSubmit}></Btn>
+          {/* No necesitas OnClick aquí si el botón es de tipo submit dentro de un form con onSubmit */}
+          <Btn texto="Guardar Información" />
         </form>
       </div>
     </section>
