@@ -3,10 +3,10 @@
 .contacto-main {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 50px;
+  gap: 20px; 
   max-width: 1100px;
   margin: 0 auto;
-  padding: 120px 30px 50px;
+  padding: 40px 30px 80px; 
 }
 
 .contacto_encabezado {
@@ -40,14 +40,12 @@
 /* Formulario */
 
 .contacto-formulario-container {
-  background-color: #fffaf4;
   border-radius: 8px;
-  padding: 40px 36px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  padding: 32px 36px;
   grid-column: 1 / -1;
-  max-width: 650px;
+  max-width: 1000px; 
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 60px;
 }
 
 .contacto-formulario h2 {
@@ -67,10 +65,17 @@
   border: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
 }
 
 .form-group label {
@@ -103,8 +108,8 @@
 /* Radio */
 
 .radio-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 8px;
   margin-top: 4px;
 }
@@ -112,7 +117,7 @@
 .radio-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 14px;
   padding: 8px 12px;
   border: 1px solid #d9c9b0;
   border-radius: 6px;
@@ -126,7 +131,7 @@
 .radio-item input[type="radio"] {
   width: 16px;
   height: 16px;
-  margin: 0;
+  margin: 3px;
   cursor: pointer;
 }
 
@@ -136,6 +141,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 10px;
+  grid-column: 1 / -1;
 }
 
 /* Responsive */
@@ -143,7 +149,7 @@
 @media (max-width: 768px) {
   .contacto-main {
     grid-template-columns: 1fr;
-    padding: 100px 18px 40px;
+    padding: 100px 18px 60px;
   }
 
   .contacto_encabezado {
@@ -160,9 +166,19 @@
 
   .contacto-formulario-container {
     padding: 28px 22px;
+    margin: 0 auto 40px;
+  }
+
+  .contacto-formulario fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: 1;
   }
 
   .address-grid {
     grid-template-columns: 1fr;
+    grid-column: 1;
   }
 }

@@ -1,7 +1,20 @@
+import { useEffect } from "react"; // 1. Importamos useEffect
+import api from "../services/api"; // 2. Importamos nuestra instancia de Axios personalizada
 import "./pages.css";
 import "./home.css";
 //import { Link } from "react-router-dom";
 const Home = () => {
+  useEffect(() => {
+    // Intenta pegarle a la ruta raíz de NestJS o al endpoint que tengas listo (ej. '/productos')
+    api
+      .get("/")
+      .then((response) => {
+        console.log("¡CONEXIÓN EXITOSA! NestJS respondió:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error al conectar con NestJS:", error);
+      });
+  }, []);
   return (
     <div>
       <div className="mainContainer">
