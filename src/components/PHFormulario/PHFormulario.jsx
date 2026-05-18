@@ -19,6 +19,8 @@ const PHFormulario = () => {
     Presupuesto: "",
   });
 
+  const [formularioEnviado, setFormularioEnviado] = useState(false);
+
   // 3. Función para capturar todo lo que el usuario escribe o selecciona
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,11 +30,11 @@ const PHFormulario = () => {
     });
   };
 
-  // 5. Función para procesar y enviar los datos a tu futura DB
+  // 5. Función para procesar y enviar los datos a la futura DB
   const handleSubmit = async (e) => {
     e.preventDefault(); // Evita que la página se recargue
 
-    const formulario = e.target; // Referencia al <form>
+    const formulario = e.target; 
 
   if (!formulario.checkValidity()) {
     // Mensaje de error si faltan campos obligatorios
@@ -69,16 +71,15 @@ const PHFormulario = () => {
   return (
     <section className="contacto-formulario-container">
       <div className="contacto-formulario">
-        <h2>Formulario de Contacto</h2>
-        <p>
+        <p><strong>
           ¡Queremos saber de ti! Escríbenos y nos pondremos en contacto contigo.
-        </p>
+        </strong></p>
 
         {/* Añadimos el evento onSubmit aquí */}
-        <form id="formulario" onSubmit={handleSubmit}>
+        <form id="formulario" onSubmit={handleSubmit} noValidate> {/* Usamos noValidate para manejar la validación manual con useState */}
           <fieldset>
             {/* Nombre completo */}
-            <div className="form-group">
+            <div className="form-group full-width">
               <label htmlFor="nombre">Nombre completo</label>
               <input
                 type="text"
@@ -87,7 +88,6 @@ const PHFormulario = () => {
                 value={formData.Nombre} 
                 onChange={handleChange} // Escucha cambios
                 placeholder="Fulanito Pérez"
-                required
               />
             </div>
 
@@ -101,7 +101,6 @@ const PHFormulario = () => {
                 value={formData.Email}
                 onChange={handleChange}
                 placeholder="fulanito_perez@gmail.com"
-                required
               />
             </div>
 
@@ -115,12 +114,11 @@ const PHFormulario = () => {
                 value={formData.Telefono}
                 onChange={handleChange}
                 placeholder="+52 222 123 4567"
-                required
               />
             </div>
 
-            {/* Tipo de pedido (Radio buttons arreglados) */}
-            <div className="form-group">
+            {/* Tipo de pedido */}
+            <div className="form-group full-width">
               <label>Tipo de pedido</label>
               <div className="radio-group">
                 <label className="radio-item">
@@ -130,7 +128,6 @@ const PHFormulario = () => {
                     value="Pan tradicional" // El value debe ser el string real que guardarás
                     checked={formData.Tipo_Pedido === "Pan tradicional"} // Controla cuál está marcado
                     onChange={handleChange}
-                    required
                   />
                   Pan tradicional
                 </label>
@@ -171,7 +168,7 @@ const PHFormulario = () => {
             </div>
 
             {/* Detalles */}
-            <div className="form-group">
+            <div className="form-group full-width">
               <label htmlFor="detalles">Detalles del pedido</label>
               <textarea
                 id="Detalle_Pedido"
@@ -180,12 +177,11 @@ const PHFormulario = () => {
                 value={formData.Detalle_Pedido}
                 onChange={handleChange}
                 placeholder="Sabores, cantidades, fecha, decoración, etc."
-                required
               ></textarea>
             </div>
 
-            {/* Dirección Grid */}
-            <div className="address-grid">
+            {/* Dirección */}
+            <div className="address-grid full-width">
               <div className="form-group">
                 <label htmlFor="calle">Calle</label>
                 <input
@@ -194,7 +190,6 @@ const PHFormulario = () => {
                   name="Calle"
                   value={formData.Calle}
                   onChange={handleChange}
-                  required
                 />
               </div>
 
@@ -206,7 +201,6 @@ const PHFormulario = () => {
                   name="Num"
                   value={formData.Num}
                   onChange={handleChange}
-                  required
                 />
               </div>
 
@@ -218,12 +212,11 @@ const PHFormulario = () => {
                   name="CP"
                   value={formData.CP}
                   onChange={handleChange}
-                  required
                 />
               </div>
             </div>
 
-            {/* Ciudad (Corregido: El value y onChange van en el select) */}
+            <div className="address-grid full-width">
             <div className="form-group">
               <label htmlFor="ciudad">Ciudad</label>
               <select
@@ -240,7 +233,6 @@ const PHFormulario = () => {
               </select>
             </div>
 
-            {/* Fecha de entrega */}
             <div className="form-group">
               <label htmlFor="fecha">Fecha de entrega</label>
               <input
@@ -253,7 +245,6 @@ const PHFormulario = () => {
               />
             </div>
 
-            {/* Presupuesto */}
             <div className="form-group">
               <label htmlFor="presupuesto">Presupuesto estimado MXN</label>
               <input
@@ -266,6 +257,7 @@ const PHFormulario = () => {
                 required
               />
             </div>
+          </div>
           </fieldset>
           {/* No necesitas OnClick aquí si el botón es de tipo submit dentro de un form con onSubmit */}
           <Btn texto="Guardar Información" />
